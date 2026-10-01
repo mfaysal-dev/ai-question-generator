@@ -37,7 +37,7 @@ describe("createGeminiModel", () => {
 
   it("sends JSON mode, the response schema, and the configured model", async () => {
     process.env.GEMINI_API_KEY = "AIzaSyTESTKEY123456789012345";
-    process.env.GEMINI_MODEL = " gemini-2.5-flash-lite ";
+    process.env.GEMINI_MODEL = " gemini-3.1-flash-lite ";
     generateContent.mockResolvedValue({ text: '{"questions":[]}' });
 
     const model = createGeminiModel();
@@ -51,7 +51,7 @@ describe("createGeminiModel", () => {
     expect(text).toBe('{"questions":[]}');
     expect(constructed.apiKey).toBe("AIzaSyTESTKEY123456789012345");
     expect(generateContent).toHaveBeenCalledWith({
-      model: "gemini-2.5-flash-lite",
+      model: "gemini-3.1-flash-lite",
       contents: "Topic: plants",
       config: {
         systemInstruction: "Write questions.",
@@ -76,7 +76,7 @@ describe("createGeminiModel", () => {
     });
 
     expect(generateContent.mock.calls[0]?.[0].model).toBe(DEFAULT_GEMINI_MODEL);
-    expect(DEFAULT_GEMINI_MODEL).toBe("gemini-2.5-flash");
+    expect(DEFAULT_GEMINI_MODEL).toBe("gemini-3.5-flash-lite");
   });
 
   it("does not pass provider error text that contains the key", async () => {

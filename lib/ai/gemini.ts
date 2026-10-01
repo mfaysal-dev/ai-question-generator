@@ -6,7 +6,7 @@ import { MissingApiKeyError, ProviderRequestError } from "@/lib/ai/errors";
 import { redactSecrets } from "@/lib/ai/redact";
 import type { LanguageModel, ModelCompletionRequest } from "@/lib/ai/types";
 
-export const DEFAULT_GEMINI_MODEL = "gemini-2.5-flash";
+export const DEFAULT_GEMINI_MODEL = "gemini-3.5-flash-lite";
 
 export function createGeminiModel(): LanguageModel {
   const apiKey = process.env.GEMINI_API_KEY?.trim();

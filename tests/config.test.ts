@@ -20,7 +20,7 @@ describe("secret handling", () => {
   it("keeps the example env file free of a real key", () => {
     const example = source(".env.example");
     expect(example).toContain("GEMINI_API_KEY=");
-    expect(example).toContain("GEMINI_MODEL=gemini-2.5-flash");
+    expect(example).toContain("GEMINI_MODEL=gemini-3.5-flash-lite");
     expect(example).not.toMatch(/GEMINI_API_KEY=\S+/);
     expect(example).not.toMatch(/NEXT_PUBLIC_\w+=/);
   });

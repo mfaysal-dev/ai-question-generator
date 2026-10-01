@@ -47,7 +47,7 @@ Put your key on the `GEMINI_API_KEY=` line in `.env.local`, save the file, then 
 | Name | Required | Purpose |
 | --- | --- | --- |
 | `GEMINI_API_KEY` | Yes | Server-only Gemini API key. |
-| `GEMINI_MODEL` | No | Model id. Defaults to `gemini-2.5-flash`. |
+| `GEMINI_MODEL` | No | Model id. Defaults to `gemini-3.5-flash-lite`. |
 
 Restart `npm run dev` after changing `.env.local`. Next.js only reads env files at startup.
 
@@ -56,7 +56,7 @@ Restart `npm run dev` after changing `.env.local`. Next.js only reads env files 
 1. Import this repository in Vercel. The framework preset is Next.js.
 2. Open the project **Settings → Environment Variables**.
 3. Add `GEMINI_API_KEY` and paste the key from [Google AI Studio](https://aistudio.google.com/apikey). Enable it for Production and Preview (and Development if you use `vercel dev`).
-4. Optionally add `GEMINI_MODEL`. Leave it unset to use `gemini-2.5-flash`.
+4. Optionally add `GEMINI_MODEL`. Leave it unset to use `gemini-3.5-flash-lite`.
 5. Do not add `NEXT_PUBLIC_GEMINI_API_KEY`. A `NEXT_PUBLIC_` prefix would expose the key in the browser bundle.
 6. Redeploy. Vercel does not upload `.env.local`; the dashboard variables are what the deployed server reads.
 
