@@ -81,3 +81,10 @@ The key is only used when someone generates questions, so the project can build 
 5. The page renders a set only after the same schema accepts it.
 
 The model adapter lives in `lib/ai/gemini.ts`. Question checking lives in `lib/questions/` and does not import the SDK, so another provider can replace the adapter without changing the validation rules.
+
+## Author
+
+Built by [Mahir Faysal](https://mfaysal.com), a web developer in Bangladesh.
+
+- Project page: [Quizwright (AI Question Generator) on mfaysal.com](https://mfaysal.com/projects/ai-question-generator)
+- More projects: [mfaysal.com/projects](https://mfaysal.com/projects) · Blog: [mfaysal.com/blog](https://mfaysal.com/blog)
